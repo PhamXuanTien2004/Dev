@@ -5,6 +5,7 @@
 #define MAX 100
 int sl=10;
 using namespace std;
+void welcome();
 void khungngoai();
 
 void veran(int toadox[], int toadoy[]);
@@ -21,10 +22,13 @@ bool ktra(int toadox[],int toadoy[]);
 void taoqua(int &xqua, int &yqua, int toadox[],int toadoy[]);
 bool randequa(int xqua, int yqua, int toadox[],int toadoy[]);
 bool rananqua(int x, int y, int xqua, int yqua);
+char ansUser();
 int main()
-{	int ch=0;
-	cin>>ch;
-	if(ch!=0)
+{	
+	welcome();
+	char ch=ansUser();
+	system("cls");
+	if(ch=='y'||ch=='Y'||ch=='n'||ch=='N')
 	{
 	bool gameover=false;
 	int toadox[MAX],toadoy[MAX];	
@@ -88,8 +92,19 @@ int main()
 	else cout<<"CUT";
 	return 0;
 }
-
-
+void welcome()
+{
+	gotoXY(5,5);
+	cout<<"Chao mung den voi ran san moi"<<endl;
+}
+char ansUser()
+{
+	char ans;
+	cout<<"Ban muon bat dau choi chu???"<<endl;
+	cout<<"Y or N."<<endl;
+	cin>>ans;
+	return ans;
+}
 
 bool rananqua(int x, int y, int xqua, int yqua)
 {
