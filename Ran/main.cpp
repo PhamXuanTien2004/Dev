@@ -44,8 +44,8 @@ int main()
 	
 	while(gameover==false)
 	{	
-		// 0 dixuong
-		// 1 di len
+		// 0 di len
+		// 1 di xuong
 		// 2 sang phai
 		// 3 sang trai
 		xoadulieucu(toadox, toadoy);
